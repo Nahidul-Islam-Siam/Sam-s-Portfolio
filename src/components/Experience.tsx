@@ -4,70 +4,40 @@ import { Calendar, MapPin, Building, Award } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experiences = [
-    {
-      title: 'Senior Full-Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      type: 'Full-time',
-      description: 'Led development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.',
-      achievements: [
-        'Increased application performance by 40%',
-        'Led team of 5 developers',
-        'Implemented CI/CD pipelines',
-        'Reduced deployment time by 60%'
-      ],
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'PostgreSQL'],
-      color: 'from-blue-500 to-cyan-500',
-    },
+   
     {
       title: 'Frontend Developer',
-      company: 'Digital Innovations Inc.',
+      company: 'Algeo Inc',
       location: 'Remote',
-      period: '2020 - 2022',
-      type: 'Full-time',
+      period: '01/04/2024 - Jan 2025',
+      type: 'Internship',
       description: 'Developed responsive web applications and collaborated with design teams to create exceptional user experiences.',
       achievements: [
-        'Built 15+ responsive websites',
+        'Built 10+ responsive websites',
         'Improved user engagement by 35%',
         'Implemented modern design systems',
         'Optimized loading speeds by 50%'
       ],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'GraphQL'],
+      technologies: ['React', 'Javascript', 'Tailwind CSS', 'Next.js', 'GraphQL'],
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Junior Web Developer',
-      company: 'StartupHub',
-      location: 'Austin, TX',
-      period: '2019 - 2020',
+      title: 'Junior Frontend Developer',
+      company: 'SM Technologies',
+      location: 'Banasree, Dhaka',
+      period: 'Mach 2025 - Present',
       type: 'Full-time',
-      description: 'Contributed to various client projects, focusing on frontend development and learning modern web technologies.',
+      description: 'Developed responsive web applications and api integration using Redux and Next.js framework and collaborated with design teams to create exceptional user experiences.',
       achievements: [
-        'Delivered 10+ client projects',
-        'Learned React and modern JS',
+        'Delivered 12+ client projects',
+        'Learned Next.js, Redux , TypeScript and API integration',
         'Collaborated with cross-functional teams',
         'Maintained 98% client satisfaction'
       ],
-      technologies: ['JavaScript', 'HTML/CSS', 'React', 'Node.js', 'MongoDB'],
+      technologies: ['TypeScript', 'HTML/CSS', 'Next.js', 'Tailwind CSS', 'Redux', 'API Integration'],
       color: 'from-emerald-500 to-teal-500',
     },
-    {
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      location: 'Various',
-      period: '2018 - 2019',
-      type: 'Freelance',
-      description: 'Worked with small businesses and startups to create custom web solutions and e-commerce platforms.',
-      achievements: [
-        'Completed 20+ freelance projects',
-        'Built e-commerce solutions',
-        'Managed client relationships',
-        'Developed project management skills'
-      ],
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
-      color: 'from-orange-500 to-red-500',
-    },
+   
   ];
 
   return (

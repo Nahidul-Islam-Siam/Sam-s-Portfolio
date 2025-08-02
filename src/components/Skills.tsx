@@ -5,17 +5,17 @@ const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: 'Frontend',
-      skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vue.js'],
+      skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Redux', 'Redux-toolkit','Javascript','Ant Design',],
       color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Python', 'Express', 'Django', 'PostgreSQL', 'MongoDB'],
+      skills: ['Node.js', 'Express',  'PostgreSQL', 'MongoDB'],
       color: 'from-purple-500 to-pink-500',
     },
     {
       title: 'Tools & Others',
-      skills: ['Git', 'Docker', 'AWS', 'Figma', 'Linux', 'GraphQL'],
+      skills: ['Git', 'VS Code',  'Figma', 'Linux'],
       color: 'from-emerald-500 to-teal-500',
     },
   ];

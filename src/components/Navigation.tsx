@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            John Doe
+            SAM
           </motion.div>
 
           {/* Desktop Navigation */}

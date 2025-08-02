@@ -32,19 +32,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'john.doe@example.com',
-      href: 'mailto:john.doe@example.com',
+      value: 'siamnahidul093@gmail.com',
+      href: 'mailto:siamnahidul093@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+88 01772593924',
+      href: 'tel:01772593924',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Dhaka, Bangladesh',
       href: '#',
     },
   ];
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
               className="mt-8 p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white"
             >
-              <h4 className="text-xl font-bold mb-2">Available for Freelance</h4>
+              <h4 className="text-xl font-bold mb-2">Available for Work</h4>
               <p className="opacity-90">
                 I'm currently available for freelance projects and full-time opportunities. 
                 Let's create something amazing together!

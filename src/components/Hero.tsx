@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             className="text-5xl md:text-7xl font-bold mb-6"
           >
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              John Doe
+              Nahidul Islam Siam
             </span>
           </motion.h1>
           
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
           >
-            Full-Stack Developer & UI/UX Designer
+            Full-Stack Developer
           </motion.p>
           
           <motion.p

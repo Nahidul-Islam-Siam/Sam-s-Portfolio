@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              John Doe
+              Nahidul Islam Siam
             </div>
             <p className="text-gray-400 leading-relaxed">
               Full-Stack Developer passionate about creating beautiful, 
@@ -61,13 +61,13 @@ const Footer: React.FC = () => {
           >
             <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
             <div className="space-y-2 text-gray-400">
-              <p>john.doe@example.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>siamnahiedul093@gmail.com</p>
+              <p>+88 01772593924</p>
+              <p>Dhaka, Bangladesh</p>
             </div>
             
             <div className="flex space-x-4 mt-6">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
           className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Nahidul Islam Siam. All rights reserved.
           </p>
           
           <motion.div

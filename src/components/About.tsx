@@ -96,7 +96,7 @@ const About: React.FC = () => {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 p-1">
               <div className="w-full h-full rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                 <img
-                  src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop"
+                  src="/hero.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover rounded-2xl"
                 />
