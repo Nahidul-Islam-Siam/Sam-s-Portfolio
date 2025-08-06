@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import GradientText from './GradientText';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,10 @@ const Navigation: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            SAM
+      <GradientText colors={["#2563EB", "#9333EA"]}
+ textSize="text-4xl">
+  SAM
+</GradientText>
           </motion.div>
 
           {/* Desktop Navigation */}

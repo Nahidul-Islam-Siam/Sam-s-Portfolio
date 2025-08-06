@@ -30,6 +30,7 @@ const Hero: React.FC = () => {
               colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
               animationSpeed={3}
               showBorder={false}
+              textSize="text-5xl md:text-7xl"
               className="custom-class"
             >
               Nahidul Islam Siam
