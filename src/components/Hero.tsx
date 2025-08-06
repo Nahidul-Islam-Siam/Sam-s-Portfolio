@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import GradientText from './GradientText';
+
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -8,7 +10,10 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -21,11 +26,16 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
+            <GradientText
+              colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >
               Nahidul Islam Siam
-            </span>
+            </GradientText>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,14 +44,15 @@ const Hero: React.FC = () => {
           >
             Full-Stack Developer
           </motion.p>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
           >
-            Crafting beautiful, functional, and user-centered digital experiences with modern technologies and creative problem-solving.
+            Crafting beautiful, functional, and user-centered digital experiences
+            with modern technologies and creative problem-solving.
           </motion.p>
 
           <motion.div
@@ -58,7 +69,7 @@ const Hero: React.FC = () => {
             >
               View My Work
             </motion.button>
-            
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

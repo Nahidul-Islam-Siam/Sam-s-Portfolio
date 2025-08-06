@@ -1,57 +1,129 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+
+type GalleryItem = {
+  id: number;
+  title: string;
+  images: string[]; // multiple images per item
+  description?: string;
+  date?: string;
+};
 
 const Gallery: React.FC = () => {
-  const galleryItems = [
-    {
-      id: 1,
-      title: 'React & Tailwind UI',
-      image:
-        'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Building responsive UI components with React and Tailwind.',
-    },
-    {
-      id: 2,
-      title: 'Photography Hobby',
-      image:
-        'https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=600',
-      date: 'July 2025',
-      description: 'Exploring nature and urban photography during weekends.',
-    },
-    {
-      id: 3,
-      title: 'Next.js Portfolio',
-      image:
-        'https://images.pexels.com/photos/1181319/pexels-photo-1181319.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Creating fast, SEO-friendly portfolios with Next.js.',
-    },
-    {
-      id: 4,
-      title: 'Hiking in the Mountains',
-      image:
-        'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=600',
-      date: 'June 2025',
-      description: 'Weekend hiking trip to recharge and connect with nature.',
-    },
-    {
-      id: 5,
-      title: 'AI Experimentation',
-      image:
-        'https://images.pexels.com/photos/5473953/pexels-photo-5473953.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Playing with machine learning models and neural networks.',
-    },
-    {
-      id: 6,
-      title: 'Family Picnic',
-      image:
-        'https://images.pexels.com/photos/1183356/pexels-photo-1183356.jpeg?auto=compress&cs=tinysrgb&w=600',
-      date: 'May 2025',
-      description: 'A sunny day out with family and friends.',
-    },
-  ];
+ const galleryItems: GalleryItem[] = [
+  {
+    id: 1,
+    title: 'React & Tailwind UI',
+    images: [
+      'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    description: 'Building responsive UI components with React and Tailwind.',
+  },
+  {
+    id: 2,
+    title: 'Photography Hobby',
+    images: [
+      'https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/414172/pexels-photo-414172.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/414173/pexels-photo-414173.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/414174/pexels-photo-414174.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    date: 'July 2025',
+    description: 'Exploring nature and urban photography during weekends.',
+  },
+  {
+    id: 3,
+    title: 'Next.js Portfolio',
+    images: [
+      'https://images.pexels.com/photos/1181319/pexels-photo-1181319.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1181320/pexels-photo-1181320.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    description: 'Creating fast, SEO-friendly portfolios with Next.js.',
+  },
+  {
+    id: 4,
+    title: 'Hiking in the Mountains',
+    images: [
+      'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/518544/pexels-photo-518544.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    date: 'June 2025',
+    description: 'Weekend hiking trip to recharge and connect with nature.',
+  },
+  {
+    id: 5,
+    title: 'AI Experimentation',
+    images: [
+      'https://images.pexels.com/photos/5473953/pexels-photo-5473953.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/5473954/pexels-photo-5473954.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    description: 'Playing with machine learning models and neural networks.',
+  },
+  {
+    id: 6,
+    title: 'Family Picnic',
+    images: [
+      'https://images.pexels.com/photos/1183356/pexels-photo-1183356.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/1183357/pexels-photo-1183357.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    date: 'May 2025',
+    description: 'A sunny day out with family and friends.',
+  },
+  {
+    id: 7,
+    title: 'Cityscape Views',
+    images: [
+      'https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/373913/pexels-photo-373913.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/373914/pexels-photo-373914.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    description: 'Capturing breathtaking city skylines during sunset.',
+  },
+  {
+    id: 8,
+    title: 'Cooking Adventures',
+    images: [
+      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600',
+    ],
+    description: 'Trying new recipes and food styling.',
+  },
+];
 
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  // Track which gallery item is opened and which image index inside that item
+  const [selectedGalleryIndex, setSelectedGalleryIndex] = useState<number | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  // Open modal for given gallery index and reset image index to 0
+  const openModal = (galleryIndex: number) => {
+    setSelectedGalleryIndex(galleryIndex);
+    setSelectedImageIndex(0);
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setSelectedGalleryIndex(null);
+    setSelectedImageIndex(0);
+  };
+
+  // Go to next image inside modal slider
+  const nextImage = () => {
+    if (selectedGalleryIndex === null) return;
+    const images = galleryItems[selectedGalleryIndex].images;
+    setSelectedImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  // Go to previous image inside modal slider
+  const prevImage = () => {
+    if (selectedGalleryIndex === null) return;
+    const images = galleryItems[selectedGalleryIndex].images;
+    setSelectedImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
     <section id="gallery" className="py-20 bg-gray-50 dark:bg-gray-900 min-h-screen">
@@ -74,17 +146,18 @@ const Gallery: React.FC = () => {
 
         {/* Gallery Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryItems.map((item, index) => (
+          {galleryItems.map((item, galleryIndex) => (
             <motion.div
               key={item.id}
               className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg cursor-pointer overflow-hidden"
-              onClick={() => setSelectedImage(index)}
+              onClick={() => openModal(galleryIndex)}
               whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="aspect-[4/3] overflow-hidden rounded-t-xl">
+                {/* Show first image of gallery item as preview */}
                 <motion.img
-                  src={item.image}
+                  src={item.images[0]}
                   alt={item.title}
                   className="object-cover w-full h-full"
                   whileHover={{ scale: 1.1 }}
@@ -105,48 +178,70 @@ const Gallery: React.FC = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal with slider for selected gallery item */}
       <AnimatePresence>
-        {selectedImage !== null && (
+        {selectedGalleryIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
+            onClick={closeModal}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-              className="relative max-w-4xl max-h-[90vh] bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl"
+              className="relative max-w-4xl max-h-[90vh] bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                onClick={() => setSelectedImage(null)}
+                onClick={closeModal}
                 className="absolute top-4 right-4 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors z-10"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6 text-white" />
               </button>
 
+              {/* Slider controls */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/40 rounded-full hover:bg-black/70 transition-colors z-10"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/40 rounded-full hover:bg-black/70 transition-colors z-10"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Image */}
               <img
-                src={galleryItems[selectedImage].image}
-                alt={galleryItems[selectedImage].title}
-                className="w-full h-auto max-h-[70vh] object-contain"
+                src={galleryItems[selectedGalleryIndex].images[selectedImageIndex]}
+                alt={galleryItems[selectedGalleryIndex].title}
+                className="w-full h-auto max-h-[70vh] object-contain mx-auto"
                 loading="lazy"
               />
-              <div className="p-6">
+
+              {/* Description */}
+              <div className="p-6 text-center">
                 <h3 className="text-3xl font-bold mt-2 text-gray-800 dark:text-gray-100">
-                  {galleryItems[selectedImage].title}
+                  {galleryItems[selectedGalleryIndex].title}
                 </h3>
-                {(galleryItems[selectedImage].description || galleryItems[selectedImage].date) && (
+                {(galleryItems[selectedGalleryIndex].description || galleryItems[selectedGalleryIndex].date) && (
                   <p className="mt-3 text-gray-600 dark:text-gray-300 text-lg">
-                    {galleryItems[selectedImage].description}{' '}
-                    {galleryItems[selectedImage].date && <span>— {galleryItems[selectedImage].date}</span>}
+                    {galleryItems[selectedGalleryIndex].description}{' '}
+                    {galleryItems[selectedGalleryIndex].date && <span>— {galleryItems[selectedGalleryIndex].date}</span>}
                   </p>
                 )}
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                  Image {selectedImageIndex + 1} of {galleryItems[selectedGalleryIndex].images.length}
+                </p>
               </div>
             </motion.div>
           </motion.div>
