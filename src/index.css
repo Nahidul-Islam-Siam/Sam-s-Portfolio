@@ -103,6 +103,13 @@ input:focus, textarea:focus, button:focus {
   z-index: -1;
 }
 
+.orb-container {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

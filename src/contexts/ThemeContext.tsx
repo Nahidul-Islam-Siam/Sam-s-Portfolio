@@ -18,13 +18,20 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('darkMode') === 'true';
+      const stored = localStorage.getItem('darkMode');
+      if (stored === null) {
+        // Default to dark mode if no preference is stored
+        return true;
+      }
+      return stored === 'true';
     }
-    return false;
+    // Default to dark during SSR
+    return true;
   });
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode.toString());
+
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -32,7 +39,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  const toggleDarkMode = () => setDarkMode(prev => !prev);
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>

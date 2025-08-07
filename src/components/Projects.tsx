@@ -5,45 +5,57 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Flex - Ride Sharing App",
       description:
-        "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL.",
+        "A responsive ride sharing platform with user authentication, search functionality, and real-time updates.",
       image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "#",
-      live: "#",
+        "/flex.png",
+      tags: ["Next.js", "TypeScript", "Redux", "Framer Motion","Ant Design"],
+      github: "https://github.com/Nahidul-Islam-Siam/flex-frontend",
+      live: "https://flex-frontend-drab.vercel.app/",
     },
     {
-      title: "Task Management App",
+      title: "AiaRealty - Property Management Platform",
       description:
-        "A collaborative project management tool with drag-and-drop functionality and team collaboration.",
+        "A property management platform with user authentication,Advanced search functionality and Portfolio type.",
       image:
-        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["React", "TypeScript", "Socket.io", "MongoDB"],
-      github: "#",
-      live: "#",
+        "/aiarealty.png",
+      tags: ["Next.js", "TypeScript", "Google Maps API", "Redux", "Ant Design"],
+      github: "https://github.com/Nahidul-Islam-Siam/aiarealty_client-nahidul",
+      live: "https://aiarealty.com/",
     },
     {
-      title: "AI-Powered Analytics Dashboard",
+      title: "Jimen - A bricklayer's works portfolio ",
       description:
-        "An intelligent analytics platform with predictive analytics and automated reporting.",
+        "An interactive portfolio website showcasing a collection of bricklayer's works.",
       image:
         "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["Next.js", "Python", "TensorFlow", "D3.js"],
-      github: "#",
-      live: "#",
+      tags: ["Next.js", "TypeScript", "Redux", "Shadcdn UI", "MongoDB","NextAuth"],
+      github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
+      live: "https://paulina2029-frontend.vercel.app/",
     },
-    // --- Add more dummy projects to test pagination ---
-    ...Array.from({ length: 12 }, (_, i) => ({
-      title: `Sample Project ${i + 4}`,
-      description: "A placeholder project for pagination testing.",
+    {
+      title: "PicRez - A Job seeker's and recruiter's platform",
+      description:
+        "A job seeker's and recruiter's platform with group chat,blog, facebook type social media and more .",
       image:
-        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["React", "Tailwind", "Framer Motion"],
-      github: "#",
-      live: "#",
-    })),
+        "/picrez.png",
+      tags: ["Next.js","TypeScript", "WebSockets","Ant Design" ,"Custom Auth", "Redux", "Next JS", "MongoDB","PostSql"],
+      // github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
+      live: "https://picrez.com/",
+    },
+
+    {
+      title: "SkillSwitch - A Trader's Platform",
+      description:
+        "A rplatform like fiverr or upwork with user authentication, chat, sell and buy services.",
+      image:
+        "/skillswith.png",
+      tags: ["Next.js", "TypeScript", "Redux", "Socket.io","Ant Design","Custom Auth", "Stripe-js", "Stripe Authentication"],
+      github: "https://github.com/Nahidul-Islam-Siam/flex-frontend",
+      live: "https://kmathew95-client.vercel.app/",
+    },
+
   ];
 
   const ITEMS_PER_PAGE = 6;
@@ -121,6 +133,7 @@ const Projects: React.FC = () => {
                 <div className="flex space-x-3">
                   <motion.a
                     href={project.github}
+                    target="_blank"
                     whileHover={{ scale: 1.1 }}
                     className="flex items-center px-3 py-1.5 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
                   >
@@ -129,6 +142,7 @@ const Projects: React.FC = () => {
                   </motion.a>
                   <motion.a
                     href={project.live}
+                    target="_blank"
                     whileHover={{ scale: 1.1 }}
                     className="flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-sm font-medium hover:shadow-md transition-shadow"
                   >

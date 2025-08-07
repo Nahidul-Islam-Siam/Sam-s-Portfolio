@@ -18,7 +18,7 @@ const Experience: React.FC = () => {
         'Implemented modern design systems',
         'Optimized loading speeds by 50%'
       ],
-      technologies: ['React', 'Javascript', 'Tailwind CSS', 'Next.js', 'GraphQL'],
+      technologies: ['React', 'Javascript', 'Tailwind CSS', 'Next.js', 'Ant Design', 'Framer Motion', 'Redux', 'Google Maps API', 'API Integration','Node.js', 'Express', 'MongoDB'],
       color: 'from-purple-500 to-pink-500',
     },
     {
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
         'Collaborated with cross-functional teams',
         'Maintained 98% client satisfaction'
       ],
-      technologies: ['TypeScript', 'HTML/CSS', 'Next.js', 'Tailwind CSS', 'Redux', 'API Integration'],
+      technologies: ['TypeScript','React', 'Javascript', 'Redux', 'Node.js', 'Express', 'MongoDB', 'Socket.io' ,'WebSockets', 'Next.js', 'Tailwind CSS', 'Redux', 'API Integration','Ant Design', 'Framer Motion'],
       color: 'from-emerald-500 to-teal-500',
     },
    

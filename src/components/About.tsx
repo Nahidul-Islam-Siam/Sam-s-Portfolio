@@ -35,7 +35,7 @@ const About: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate developer with 5+ years of experience creating digital solutions that make a difference.
+            I'm a passionate developer with 1.5+ years of experience creating digital solutions that make a difference.
           </p>
         </motion.div>
 

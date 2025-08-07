@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import GradientText from './GradientText';
-
+import Orb from './Gsap/Orb';
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -12,9 +12,10 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Content - behind Orb */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +32,6 @@ const Hero: React.FC = () => {
               animationSpeed={3}
               showBorder={false}
               textSize="text-5xl md:text-7xl"
-              className="custom-class"
             >
               Nahidul Islam Siam
             </GradientText>
@@ -86,19 +86,15 @@ const Hero: React.FC = () => {
             transition={{ delay: 1 }}
             className="flex items-center justify-center space-x-6 mb-16"
           >
-            {[
-              { icon: Github, href: '#' },
-              { icon: Linkedin, href: '#' },
-              { icon: Mail, href: '#' },
-            ].map((social, index) => (
+            {[Github, Linkedin, Mail].map((Icon, index) => (
               <motion.a
                 key={index}
-                href={social.href}
+                href="#"
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow"
               >
-                <social.icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <Icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
               </motion.a>
             ))}
           </motion.div>
@@ -119,6 +115,16 @@ const Hero: React.FC = () => {
             <ArrowDown className="w-6 h-6 text-gray-600 dark:text-gray-400" />
           </motion.button>
         </motion.div>
+      </div>
+
+      {/* Orb overlay on top */}
+      <div className="absolute inset-0 z-20 opacity-70 pointer-events-none">
+        <Orb
+          hoverIntensity={0.5}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
+        />
       </div>
     </section>
   );
