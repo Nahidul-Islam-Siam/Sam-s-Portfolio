@@ -152,7 +152,7 @@ export default function ExperienceSection() {
               className="inline-flex items-center px-8 py-6 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/60 active:scale-[0.99] transition"
               onClick={() => {
                 // Replace with your resume link
-                window.open("https://example.com/your-resume.pdf", "_blank", "noopener,noreferrer")
+                window.open("https://drive.google.com/file/d/1jlCaWSemEyphnvqytkdm6cZ1D1pY5Zeh/view?usp=sharing", "_blank", "noopener,noreferrer")
               }}
             >
               <Download className="mr-2 h-4 w-4" />

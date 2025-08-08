@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import GradientText from './GradientText';
-import Orb from './Gsap/Orb';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import GradientText from "./GradientText";
+import Orb from "./Gsap/Orb";
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
-    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             className="text-5xl md:text-7xl font-bold mb-6"
           >
             <GradientText
-              colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
               animationSpeed={3}
               showBorder={false}
               textSize="text-5xl md:text-7xl"
@@ -52,8 +52,8 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.6 }}
             className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
           >
-            Crafting beautiful, functional, and user-centered digital experiences
-            with modern technologies and creative problem-solving.
+            Crafting beautiful, functional, and user-centered digital
+            experiences with modern technologies and creative problem-solving.
           </motion.p>
 
           <motion.div
@@ -76,28 +76,38 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-semibold hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
             >
-              Download Resume
+              <a target="_blank" href="https://drive.google.com/file/d/1jlCaWSemEyphnvqytkdm6cZ1D1pY5Zeh/view?usp=sharing">
+                {" "}
+                Download Resume
+              </a>
             </motion.button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="flex items-center justify-center space-x-6 mb-16"
-          >
-            {[Github, Linkedin, Mail].map((Icon, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <Icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-              </motion.a>
-            ))}
-          </motion.div>
+       <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1 }}
+  className="flex items-center justify-center space-x-6 mb-16"
+>
+  {[
+    { Icon: Github, url: "https://github.com/Nahidul-Islam-Siam" },
+    { Icon: Linkedin, url: "#" },
+    { Icon: Mail, url: "mailto:siamnahidul093@gmail.com" },
+  ].map(({ Icon, url }, index) => (
+    <motion.a
+      key={index}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.2, y: -5 }}
+      whileTap={{ scale: 0.9 }}
+      className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+    >
+      <Icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+    </motion.a>
+  ))}
+</motion.div>
+
         </motion.div>
 
         <motion.div
