@@ -1,6 +1,7 @@
+ 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Facebook, Github, Mail } from "lucide-react";
 import GradientText from "./GradientText";
 import Orb from "./Gsap/Orb";
 
@@ -91,7 +92,7 @@ const Hero: React.FC = () => {
 >
   {[
     { Icon: Github, url: "https://github.com/Nahidul-Islam-Siam" },
-    { Icon: Linkedin, url: "#" },
+    { Icon: Facebook, url: "https://www.facebook.com/nahidulislam.siam.39" },
     { Icon: Mail, url: "mailto:siamnahidul093@gmail.com" },
   ].map(({ Icon, url }, index) => (
     <motion.a
