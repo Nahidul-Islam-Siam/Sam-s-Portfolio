@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
       description:
         "An interactive portfolio website showcasing a collection of bricklayer's works.",
       image:
-        "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/jimen.png",
       tags: ["Next.js", "TypeScript", "Redux", "Shadcdn UI", "MongoDB","NextAuth"],
       github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
       live: "https://paulina2029-frontend.vercel.app/",
