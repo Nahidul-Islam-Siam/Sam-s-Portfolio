@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Palette, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   const features = [
@@ -35,7 +38,7 @@ const About: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate developer with 1.5+ years of experience creating digital solutions that make a difference.
+            I&lsquo;m a passionate developer with 1.5+ years of experience creating digital solutions that make a difference.
           </p>
         </motion.div>
 
@@ -50,12 +53,12 @@ const About: React.FC = () => {
               My Journey
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Started as a curious student fascinated by technology, I've evolved into a full-stack developer 
+              Started as a curious student fascinated by technology, I&lsquo;ve evolved into a full-stack developer 
               who loves solving complex problems and creating intuitive user experiences. My journey has taken 
               me through various technologies and frameworks, always with a focus on continuous learning and growth.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+              When I&lsquo;m not coding, you&lsquo;ll find me exploring new technologies, contributing to open-source projects, 
               or mentoring aspiring developers. I believe in the power of collaboration and knowledge sharing 
               to drive innovation and create better solutions.
             </p>
@@ -95,7 +98,9 @@ const About: React.FC = () => {
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 p-1">
               <div className="w-full h-full rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src="/hero.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover rounded-2xl"

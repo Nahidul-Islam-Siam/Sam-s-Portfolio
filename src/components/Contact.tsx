@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
@@ -63,7 +65,7 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Let's discuss your next project or just say hello. I'm always excited to work on new challenges.
+            Let&lsquo;s discuss your next project or just say hello. I&lsquo;m always excited to work on new challenges.
           </p>
         </motion.div>
 
@@ -76,7 +78,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-8 text-gray-800 dark:text-gray-200">
-              Let's Connect
+              Let&lsquo;s Connect
             </h3>
             
             <div className="space-y-6">
@@ -115,8 +117,8 @@ const Contact: React.FC = () => {
             >
               <h4 className="text-xl font-bold mb-2">Available for Work</h4>
               <p className="opacity-90">
-                I'm currently available for freelance projects and full-time opportunities. 
-                Let's create something amazing together!
+                I&lsquo;m currently available for freelance projects and full-time opportunities. 
+                Let&lsquo;s create something amazing together!
               </p>
             </motion.div>
           </motion.div>

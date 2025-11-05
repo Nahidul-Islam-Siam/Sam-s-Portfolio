@@ -1,3 +1,5 @@
+'use client'
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextType {
@@ -16,28 +18,38 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('darkMode');
-      if (stored === null) {
-        // Default to dark mode if no preference is stored
-        return true;
-      }
-      return stored === 'true';
-    }
-    // Default to dark during SSR
-    return true;
-  });
+  const [darkMode, setDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('darkMode', darkMode.toString());
-
-    if (darkMode) {
+    setMounted(true);
+    const stored = localStorage.getItem('darkMode');
+    if (stored === null) {
+      // Default to dark mode if no preference is stored
+      setDarkMode(true);
       document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      const isDark = stored === 'true';
+      setDarkMode(isDark);
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
-  }, [darkMode]);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem('darkMode', darkMode.toString());
+
+      if (darkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, [darkMode, mounted]);
 
   const toggleDarkMode = () => setDarkMode(prev => !prev);
 

@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 type GalleryItem = {
   id: number;
@@ -221,7 +224,9 @@ const Gallery: React.FC = () => {
               </button>
 
               {/* Image */}
-              <img
+              <Image
+                width={0}
+                height={0}
                 src={galleryItems[selectedGalleryIndex].images[selectedImageIndex]}
                 alt={galleryItems[selectedGalleryIndex].title}
                 className="w-full h-auto max-h-[70vh] object-contain mx-auto"

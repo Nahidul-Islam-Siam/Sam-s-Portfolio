@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -100,7 +103,9 @@ const Projects: React.FC = () => {
             >
               {/* Image */}
               <div className="relative h-40 overflow-hidden group">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
