@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -7,14 +7,62 @@ import Image from "next/image";
 
 const Projects: React.FC = () => {
   const projects = [
+
     
+
+    {
+      title:
+        "Ops Wine - A Full Wine Ecommerce website and Event management platform",
+      description:
+        "A responsive wine ecommerce website, where user can search for wine, view wine details, and add wine to cart. For admin, admin can add wine and manage orders.",
+      image: "/wine.png",
+      tags: [
+        "Language Translation",
+        "Prisma",
+        "MoongoDB",
+        "Node.js",
+        "Moongoose",
+        "Stripe",
+        "Tailwind",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+      ],
+      github: "https://github.com/Nahidul-Islam-Siam/Wine",
+      live: "https://ops.wine/",
+    },
+
+    {
+      title: "TECHNIEK - A Construction Job Portal",
+      description:
+        "A responsive  job portal, where user can search for jobs, view job details, and apply for jobs.",
+      image: "/htc.png",
+      tags: [
+        "GSAP ScrollTrigger",
+        "Tailwind",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+      ],
+      github: "https://github.com/Nahidul-Islam-Siam/htc-client",
+      live: "https://htc-client-ten.vercel.app/",
+    },
+    {
+      title: "Irendtly - A property sell management platform",
+      description:
+        "A website for sell property, where user can search for properties, view property details, and apply for properties. For agent, admin can add property.",
+      image: "/irendly.png",
+      tags: ["Framer Motion", "Ant Design", "Next.js", "TypeScript", "Redux"],
+      // github: "https://github.com/Nahidul-Islam-Siam/htc-client",
+      live: "https://michelefonai-client.vercel.app/",
+    },
+
     {
       title: "Flex - Ride Sharing App",
       description:
         "A responsive ride sharing platform with user authentication, search functionality, and real-time updates.",
-      image:
-        "/flex.png",
-      tags: ["Next.js", "TypeScript", "Redux", "Framer Motion","Ant Design"],
+      image: "/flex.png",
+      tags: ["Next.js", "TypeScript", "Redux", "Framer Motion", "Ant Design"],
       github: "https://github.com/Nahidul-Islam-Siam/flex-frontend",
       live: "https://flex-frontend-drab.vercel.app/",
     },
@@ -23,9 +71,15 @@ const Projects: React.FC = () => {
       title: "Pauliana - Bricklayer's Portfolio Showcase",
       description:
         "A portfolio website for a bricklayer with a portfolio of his works and a contact form.",
-      image:
-        "/pauliana.png",
-      tags: ["Next.js", "TypeScript", "Redux", "Shadcdn UI", "MongoDB","NextAuth"],
+      image: "/pauliana.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "Shadcdn UI",
+        "MongoDB",
+        "NextAuth",
+      ],
       github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
       live: "https://paulina2029-frontend.vercel.app/",
     },
@@ -33,8 +87,7 @@ const Projects: React.FC = () => {
       title: "AiaRealty - Property Management Platform",
       description:
         "A property management platform with user authentication,Advanced search functionality and Portfolio type.",
-      image:
-        "/aiarealty.png",
+      image: "/aiarealty.png",
       tags: ["Next.js", "TypeScript", "Google Maps API", "Redux", "Ant Design"],
       github: "https://github.com/Nahidul-Islam-Siam/aiarealty_client-nahidul",
       live: "https://aiarealty.com/",
@@ -43,9 +96,15 @@ const Projects: React.FC = () => {
       title: "Jimen - A bricklayer's works portfolio ",
       description:
         "An interactive portfolio website showcasing a collection of bricklayer's works.",
-      image:
-        "/jimen.png",
-      tags: ["Next.js", "TypeScript", "Redux", "Shadcdn UI", "MongoDB","NextAuth"],
+      image: "/jimen.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "Shadcdn UI",
+        "MongoDB",
+        "NextAuth",
+      ],
       github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
       live: "https://paulina2029-frontend.vercel.app/",
     },
@@ -53,9 +112,18 @@ const Projects: React.FC = () => {
       title: "PicRez - A Job seeker's and recruiter's platform",
       description:
         "A job seeker's and recruiter's platform with group chat,blog, facebook type social media and more .",
-      image:
-        "/picrez.png",
-      tags: ["Next.js","TypeScript", "WebSockets","Ant Design" ,"Custom Auth", "Redux", "Next JS", "MongoDB","PostSql"],
+      image: "/picrez.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "WebSockets",
+        "Ant Design",
+        "Custom Auth",
+        "Redux",
+        "Next JS",
+        "MongoDB",
+        "PostSql",
+      ],
       // github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
       live: "https://picrez.com/",
     },
@@ -64,13 +132,20 @@ const Projects: React.FC = () => {
       title: "SkillSwitch - A Trader's Platform",
       description:
         "A rplatform like fiverr or upwork with user authentication, chat, sell and buy services.",
-      image:
-        "/skillswith.png",
-      tags: ["Next.js", "TypeScript", "Redux", "Socket.io","Ant Design","Custom Auth", "Stripe-js", "Stripe Authentication"],
+      image: "/skillswith.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "Socket.io",
+        "Ant Design",
+        "Custom Auth",
+        "Stripe-js",
+        "Stripe Authentication",
+      ],
       github: "https://github.com/Nahidul-Islam-Siam/flex-frontend",
       live: "https://kmathew95-client.vercel.app/",
     },
-
   ];
 
   const ITEMS_PER_PAGE = 6;
@@ -80,7 +155,10 @@ const Projects: React.FC = () => {
   const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
   const displayedProjects = showAll
     ? projects
-    : projects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+    : projects.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE,
+      );
 
   return (
     <section id="projects" className="py-20 bg-white/50 dark:bg-gray-800/50">
@@ -97,7 +175,8 @@ const Projects: React.FC = () => {
             Featured Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A curated list of my recent work. Toggle to view all for a complete showcase.
+            A curated list of my recent work. Toggle to view all for a complete
+            showcase.
           </p>
         </motion.div>
 
