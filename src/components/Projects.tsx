@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const Projects: React.FC = () => {
   const projects = [
+    
     {
       title: "Flex - Ride Sharing App",
       description:
@@ -16,6 +17,17 @@ const Projects: React.FC = () => {
       tags: ["Next.js", "TypeScript", "Redux", "Framer Motion","Ant Design"],
       github: "https://github.com/Nahidul-Islam-Siam/flex-frontend",
       live: "https://flex-frontend-drab.vercel.app/",
+    },
+
+    {
+      title: "Pauliana - Bricklayer's Portfolio Showcase",
+      description:
+        "A portfolio website for a bricklayer with a portfolio of his works and a contact form.",
+      image:
+        "/pauliana.png",
+      tags: ["Next.js", "TypeScript", "Redux", "Shadcdn UI", "MongoDB","NextAuth"],
+      github: "https://github.com/Nahidul-Islam-Siam/paulina2029-frontend",
+      live: "https://paulina2029-frontend.vercel.app/",
     },
     {
       title: "AiaRealty - Property Management Platform",
